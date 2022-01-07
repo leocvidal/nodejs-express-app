@@ -16,6 +16,10 @@ app.use(bodyParser.json());
 app.use('/health', healthRoutes);
 app.use('/swagger', swaggerRoutes);
 
+app.use('', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, '../public', 'leovidal.html'));
+});
+
 // default path to serve up index.html (single page application)
 app.all('', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, '../public', 'index.html'));
