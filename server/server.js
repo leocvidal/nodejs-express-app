@@ -24,7 +24,8 @@ app.all('', (req, res) => {
 // start node server
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
-  console.log(`App UI available http://localhost:${port}`);
+//  console.log(`App UI available http://localhost:${port}`);
+  console.log(`App  available on ` + __dirname) + process.env.PORT ;
   console.log(`Swagger UI available http://localhost:${port}/swagger/api-docs`);
 });
 
