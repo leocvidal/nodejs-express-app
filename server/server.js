@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use('/health', healthRoutes);
 app.use('/swagger', swaggerRoutes);
 
-app.use('', (req, res) => {
+app.use('/leovidal', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, '../public', 'leovidal.html'));
 });
 
